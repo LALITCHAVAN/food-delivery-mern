@@ -1,0 +1,83 @@
+/* ============================================================
+   Restaurant Card
+   ============================================================ */
+
+.restaurant-card {
+  display: block;
+  background: var(--neutral-0);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  height: 100%;
+}
+
+.restaurant-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.restaurant-card-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.restaurant-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.restaurant-card:hover .restaurant-card-image img {
+  transform: scale(1.08);
+}
+
+.restaurant-card-body {
+  padding: var(--space-2);
+}
+
+.restaurant-card-name {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  transition: color var(--transition-fast);
+}
+
+.restaurant-card:hover .restaurant-card-name {
+  color: var(--primary-600);
+}
+
+.restaurant-card-address {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--neutral-500);
+  margin-bottom: var(--space-1);
+}
+
+.restaurant-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.restaurant-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--success-50);
+  color: var(--success-700);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.restaurant-card-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--neutral-500);
+  font-size: 0.85rem;
+}

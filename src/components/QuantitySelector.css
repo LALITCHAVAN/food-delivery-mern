@@ -1,0 +1,37 @@
+.qty-selector {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--neutral-0);
+}
+
+.qty-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-700);
+  transition: all var(--transition-fast);
+}
+
+.qty-md .qty-btn { width: 40px; height: 40px; }
+.qty-sm .qty-btn { width: 32px; height: 32px; }
+
+.qty-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+}
+
+.qty-value {
+  min-width: 40px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--neutral-900);
+}
+
+.qty-sm .qty-value {
+  min-width: 32px;
+  font-size: 0.85rem;
+}

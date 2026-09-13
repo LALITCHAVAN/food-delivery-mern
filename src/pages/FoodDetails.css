@@ -1,0 +1,259 @@
+/* ============================================================
+   Food Details Page
+   ============================================================ */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--neutral-600);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+  transition: color var(--transition-fast);
+}
+
+.back-link:hover { color: var(--primary-600); }
+
+.food-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.food-detail-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 3;
+}
+
+.food-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-detail-unavailable {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--error-600);
+  color: var(--neutral-0);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.food-detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-detail-category {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--primary-50);
+  color: var(--primary-600);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  transition: background var(--transition-fast);
+}
+
+.food-detail-category:hover { background: var(--primary-100); }
+
+.food-detail-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: var(--space-1);
+}
+
+.food-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.food-detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--success-50);
+  color: var(--success-700);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.food-detail-restaurant {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--secondary-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.food-detail-desc {
+  color: var(--neutral-600);
+  margin-bottom: var(--space-3);
+  line-height: 1.7;
+}
+
+.food-detail-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: var(--space-3);
+}
+
+.food-detail-price {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--neutral-900);
+}
+
+.food-detail-unit {
+  color: var(--neutral-500);
+  font-size: 0.9rem;
+}
+
+.food-detail-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.food-detail-qty,
+.food-detail-total {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.food-detail-total strong {
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  color: var(--primary-600);
+}
+
+.food-detail-buttons {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.food-detail-buttons .btn {
+  flex: 1;
+  padding: 14px;
+}
+
+.food-detail-restaurant-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+}
+
+.food-detail-restaurant-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.food-detail-restaurant-card > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-detail-restaurant-card span {
+  font-size: 0.85rem;
+  color: var(--neutral-500);
+}
+
+.food-detail-delivery {
+  color: var(--success-600) !important;
+  font-weight: 500;
+}
+
+/* ---------- Reviews ---------- */
+.food-reviews {
+  margin-top: var(--space-4);
+}
+
+.food-reviews h2 {
+  margin-bottom: var(--space-2);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.review-item {
+  background: var(--neutral-0);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-sm);
+}
+
+.review-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.review-item-stars {
+  color: var(--accent-500);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.review-item p {
+  color: var(--neutral-600);
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .food-detail {
+    grid-template-columns: 1fr;
+  }
+  .food-detail-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .food-detail-qty,
+  .food-detail-total {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-detail-buttons {
+    flex-direction: column;
+  }
+  .food-detail-restaurant-card {
+    flex-wrap: wrap;
+  }
+  .food-detail-restaurant-card .btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}

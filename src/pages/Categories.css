@@ -1,0 +1,146 @@
+/* ============================================================
+   Categories / Food Listing Page
+   ============================================================ */
+
+.page-header h1 { margin-bottom: 4px; }
+
+.cat-toolbar {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.cat-search {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cat-search-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--neutral-400);
+}
+
+.cat-search input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  transition: border-color var(--transition-fast);
+}
+
+.cat-search input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+}
+
+.cat-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-full);
+  color: var(--neutral-500);
+}
+
+.cat-sort select {
+  border: none;
+  background: transparent;
+  padding: 12px 0;
+  font-weight: 500;
+  color: var(--neutral-800);
+  cursor: pointer;
+}
+
+.cat-sort select:focus { outline: none; }
+
+.cat-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.cat-pill {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.cat-pill:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+}
+
+.cat-pill.active {
+  background: var(--primary-600);
+  color: var(--neutral-0);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+}
+
+.cat-results-count {
+  color: var(--neutral-500);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Pagination ---------- */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-4);
+}
+
+.page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--neutral-200);
+  color: var(--neutral-600);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: var(--primary-500);
+  color: var(--primary-600);
+}
+
+.page-btn.active {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: var(--neutral-0);
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .cat-toolbar {
+    flex-direction: column;
+  }
+  .cat-sort {
+    width: 100%;
+  }
+  .cat-sort select {
+    flex: 1;
+  }
+}

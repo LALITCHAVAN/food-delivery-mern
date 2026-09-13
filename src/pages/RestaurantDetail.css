@@ -1,0 +1,83 @@
+/* ============================================================
+   Restaurant Detail Page
+   ============================================================ */
+
+.rest-detail-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  background: var(--neutral-0);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.rest-detail-banner {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.rest-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rest-detail-info {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rest-detail-info h1 {
+  margin-bottom: var(--space-1);
+}
+
+.rest-detail-address {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--neutral-500);
+  margin-bottom: var(--space-2);
+}
+
+.rest-detail-meta {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.rest-detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--success-50);
+  color: var(--success-700);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.rest-detail-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--primary-50);
+  color: var(--primary-600);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.rest-detail-section-title {
+  margin-bottom: var(--space-3);
+}
+
+@media (max-width: 768px) {
+  .rest-detail-header {
+    grid-template-columns: 1fr;
+  }
+}
